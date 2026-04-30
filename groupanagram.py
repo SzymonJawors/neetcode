@@ -7,6 +7,7 @@ def groupAnagrams(strs):
         sorted_s = "".join(sorted(s))
         
         res[sorted_s].append(s)
+        print(list(res))
         
     
     return list(res.values())
