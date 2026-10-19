@@ -1,4 +1,5 @@
 def maxProfit(prices):
+    """Return the maximum profit from one buy followed by one sell."""
     l, r = 0, 1
     max_p = 0
     

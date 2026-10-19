@@ -1,4 +1,5 @@
 def exists(board, word):
+    """Return whether ``word`` can be formed by adjacent cells in ``board``."""
     rows, cols = len(board), len(board[0])
     
     def dfs(r, c, i):
@@ -9,6 +10,7 @@ def exists(board, word):
             return False
         
         temp = board[r][c]
+        # Temporarily mark the cell to prevent reusing it in this path.
         board[r][c] = "#"
         
         res = (dfs(r + 1, c, i + 1) or dfs(r - 1, c, i + 1) or dfs(r, c + 1, i + 1) or dfs(r, c - 1, i + 1))

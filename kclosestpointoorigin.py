@@ -1,6 +1,7 @@
 import heapq
 
 def kClosest(points, k):
+    """Return the ``k`` points closest to the origin."""
     min_heap = []
     for x, y in points:
         dist = (x**2) + (y**2)

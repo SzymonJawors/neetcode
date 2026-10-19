@@ -1,4 +1,5 @@
 def hasCycle(head):
+    """Return whether a linked list contains a cycle."""
     slow = head
     fast = head
     

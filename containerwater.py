@@ -1,4 +1,5 @@
 def maxArea(height):
+    """Return the maximum area formed by two vertical lines."""
     res = 0
     l,r =0, len(height) -1
     

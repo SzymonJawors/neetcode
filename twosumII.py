@@ -1,4 +1,5 @@
 def twoSum(numbers, target):
+    """Return one-based indices of two sorted values that sum to ``target``."""
     l = 0
     r = len(numbers) - 1
     while l < r:

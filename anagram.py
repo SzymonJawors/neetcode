@@ -1,4 +1,5 @@
 def anagram(s, t):
+    """Return whether ``s`` and ``t`` contain the same character counts."""
     if len(s) != len (t):
         return False
     

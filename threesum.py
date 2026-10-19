@@ -1,4 +1,5 @@
 def threesum(nums):
+    """Return unique triples from ``nums`` whose values sum to zero."""
     nums.sort()
     res = []
     

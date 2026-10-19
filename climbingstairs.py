@@ -1,4 +1,5 @@
 def climbingStairs(n):
+    """Return the number of ways to reach step ``n`` using one or two steps."""
     if n <= 2:
         return n
     

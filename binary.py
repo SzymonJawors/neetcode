@@ -1,4 +1,5 @@
 def binary(nums, target):
+    """Return the index of ``target`` in sorted ``nums``, or ``-1``."""
     l, r = 0, len(nums) - 1
     while l <= r:
         mid = (l+r) // 2

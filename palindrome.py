@@ -1,4 +1,5 @@
 def isPalindrome(s):
+    """Return whether ``s`` is a palindrome after ignoring case and punctuation."""
     l, r = 0, len(s) - 1
     
     while l < r:

@@ -1,4 +1,5 @@
 def charRep(s,k):
+    """Return the longest substring replaceable into one repeated character."""
     count = {}
     res = 0
     l = 0
