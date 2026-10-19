@@ -1,4 +1,5 @@
 def canFinish(numCourses, prerequisites):
+    """Return whether all courses can be completed without a prerequisite cycle."""
     preMap = { i: [] for i in range(numCourses) }
     for crs, pre in prerequisites:
         preMap[crs].append(pre)
@@ -7,6 +8,7 @@ def canFinish(numCourses, prerequisites):
     visitSet = set()
     
     def dfs(crs):
+        # ``visitSet`` tracks the current path; seeing a course again means a cycle.
         if crs in visitSet:
             return False
         if preMap[crs] == []:

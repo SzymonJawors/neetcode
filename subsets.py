@@ -1,7 +1,9 @@
 def subsets(nums):
+    """Return all subsets of ``nums``."""
     res = []
     subset = []
     def dfs(i):
+        # Each input value creates two branches: include it or skip it.
         if i >= len(nums):
             res.append(subset.copy())
             return

@@ -1,4 +1,5 @@
 def maxDepth(root):
+    """Return the maximum depth of a binary tree."""
     if not root:
         return 0
     

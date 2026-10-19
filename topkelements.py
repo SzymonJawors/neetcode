@@ -1,4 +1,5 @@
 def topKFrequent(nums,k):
+    """Return the ``k`` values with the highest frequencies in ``nums``."""
     count = {}
     for n in nums:
         count[n] = 1 + count.get(n, 0)

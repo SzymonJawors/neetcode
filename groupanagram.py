@@ -1,6 +1,7 @@
 from collections import defaultdict
 
 def groupAnagrams(strs):
+    """Group strings that share the same letters and return the groups."""
     res = defaultdict(list)
     
     for s in strs:

@@ -38,7 +38,7 @@ Nie ma tu punktu wejścia aplikacji, serwera, CLI ani pipeline'u budowania: to r
 
 ```
 neetcode/
-├── README.md
+├── README.MD
 ├── anagram.py                     # Valid Anagram
 ├── binary.py                      # Binary Search
 ├── bintreeleveltraversal.py       # Binary Tree Level Order Traversal
@@ -74,13 +74,13 @@ neetcode/
 └── wordsearch.py                  # Word Search
 ```
 
-Every problem lives in its own file at the repository root — there are no sub-packages, `__init__.py` files, or nested modules. The only generated artifact is a `__pycache__` directory created when the scripts are executed.
+Every problem lives in its own file at the repository root — there are no sub-packages, `__init__.py` files, or nested modules. Running a module may create Python `__pycache__` files, but they are not part of the source layout.
 
 ## Struktura projektu
 
 ```
 neetcode/
-├── README.md
+├── README.MD
 ├── anagram.py                     # Poprawny anagram
 ├── binary.py                      # Wyszukiwanie binarne
 ├── bintreeleveltraversal.py       # Przechodzenie drzewa binarnego poziomami
@@ -116,7 +116,7 @@ neetcode/
 └── wordsearch.py                  # Wyszukiwanie słów w planszy
 ```
 
-Każde zadanie znajduje się w osobnym pliku w katalogu głównym repozytorium — nie ma tu żadnych podpakietów, plików `__init__.py` ani zagnieżdżonych modułów. Jedynym generowanym artefaktem jest katalog `__pycache__`, tworzony po uruchomieniu skryptów.
+Każde zadanie znajduje się w osobnym pliku w katalogu głównym repozytorium — nie ma tu żadnych podpakietów, plików `__init__.py` ani zagnieżdżonych modułów. Uruchomienie modułu może utworzyć pliki Pythona w katalogu `__pycache__`, ale nie są one częścią kodu źródłowego.
 
 ---
 
@@ -217,6 +217,13 @@ Each file is a standalone Python module. Since there is no packaging, entry poin
 
 No installation step is required beyond having Python 3 available, since the project has zero third-party dependencies.
 
+### Runtime notes
+
+- Four modules (`anagram.py`, `groupanagram.py`, `threesum.py`, and `topkelements.py`) execute example code when run or imported, so they may print output immediately.
+- Tree and linked-list solutions expect the caller or online judge to provide compatible node objects with attributes such as `val`, `left`, `right`, and `next`.
+- `mergeTwoLists` additionally expects a `ListNode` definition to be available in the importing environment.
+- Several files follow the original online-judge naming and input conventions (for example, `twoSum` returns one-based indices while `twosum` returns zero-based indices).
+
 ## Jak uruchomić
 
 Każdy plik jest samodzielnym modułem Pythona. Ponieważ w projekcie nie ma pakietowania, punktu wejścia ani CLI, zamierzony sposób korzystania z rozwiązania to:
@@ -232,4 +239,10 @@ Każdy plik jest samodzielnym modułem Pythona. Ponieważ w projekcie nie ma pak
 
 Nie jest wymagany żaden krok instalacyjny poza posiadaniem Pythona 3, ponieważ projekt nie ma żadnych zależności zewnętrznych.
 
+### Uwagi dotyczące uruchamiania
+
+- Cztery moduły (`anagram.py`, `groupanagram.py`, `threesum.py` i `topkelements.py`) wykonują przykładowy kod przy uruchomieniu lub imporcie, więc mogą od razu wypisać wynik.
+- Rozwiązania dotyczące drzew i list wiązanych zakładają, że użytkownik lub platforma zadaniowa dostarczy odpowiednie obiekty węzłów z atrybutami takimi jak `val`, `left`, `right` i `next`.
+- `mergeTwoLists` dodatkowo zakłada dostępność definicji `ListNode` w środowisku importującym.
+- Część plików zachowuje konwencje nazewnictwa i danych z oryginalnej platformy (na przykład `twoSum` zwraca indeksy liczone od jedynki, a `twosum` od zera).
 

@@ -1,4 +1,5 @@
 def lenoflongestsubstring(s):
+    """Return the length of the longest substring without repeated characters."""
     charSet = set()
     l = 0 
     res = 0

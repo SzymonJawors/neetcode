@@ -1,4 +1,5 @@
 def mergeTwoLists(list1, list2):
+    """Merge two sorted linked lists and return the merged head."""
     
     dummy = ListNode()
     tail = dummy

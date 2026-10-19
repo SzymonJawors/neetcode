@@ -1,6 +1,7 @@
 from collections import deque
 
 def levelOrder(root):
+    """Return the values of a binary tree grouped by depth."""
     res = []
     queue = deque([root] if root else [])
     

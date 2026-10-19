@@ -1,4 +1,5 @@
 def numIslands(grid):
+    """Return the number of connected land regions in ``grid``."""
     if not grid:
         return 0
     
@@ -6,6 +7,7 @@ def numIslands(grid):
     islands = 0
     
     def dfs(r, c):
+        # Mark visited land as water so each island is counted once.
         if(r<0 or r >= rows or c < 0 or c >= cols or grid[r][c] == "0"):
             return
     

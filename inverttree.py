@@ -1,4 +1,5 @@
 def invertTree(root):
+    """Invert a binary tree in place and return its root."""
     if not root:
         return None
     

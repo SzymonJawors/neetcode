@@ -1,4 +1,5 @@
 def isValid(s):
+    """Return whether all brackets in ``s`` are correctly balanced."""
     stack = []
     
     closeToOpen = {")": "(", "]": "[", "}": "{"}
